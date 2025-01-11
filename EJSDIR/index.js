@@ -29,7 +29,9 @@ app.get("/rollDice", (req,res) => {
     let diceVal = Math.floor(Math.random() * 6) +1 ;
     res.render("rolldice.ejs", {diceVal});
 });
-
+app.get("/gajendra", (req,res) => {
+    res.send("Hi my name is gajendra");
+})
 
 app.listen(port, () => {
     console.log(`app is listening on port: ${port}` )
