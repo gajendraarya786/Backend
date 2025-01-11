@@ -27,7 +27,7 @@ app.use((req, res) => {
     // });
     
     // Passing in form of html tags
-    let code ="<h1>Fruits<ul><li>Apple</li><li>Orange</li></ul></h1>"
+    let code ="<h1>Fruits<ul><li>Apple</li><li>Orange</li><li>Banana</li></ul></h1>"
     res.send(code);
 
 });
