@@ -3,6 +3,8 @@ const app = express();
 const path = require("path");
 const port = 8080;
 
+app.use(express.static(path.join(__dirname, "/public/css")));
+app.use(express.static(path.join(__dirname, "/public/js")));
 app.set("view engine", "ejs"); 
 // if we want to access views folder and if we have started our nodemon server from backend folder ie the parent folder then we have to require path and set path.
 app.set("views", path.join(__dirname, "/views"));
