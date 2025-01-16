@@ -5,6 +5,7 @@ const port = 8080;
 
 //we use this statement whenever we use POST request
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get("/register", (req,res) => {
     let {user, password} = req.query;
@@ -13,7 +14,7 @@ app.get("/register", (req,res) => {
 
     app.post("/register", (req,res) => {
         let {username, password} = req.body;
-      res.send(`Standard POST response. Welcome ${username}, your password is ${password}`);
+      res.send(`Standard POST response. Welcome ${username}`);
     });
 
 app.listen(port, () => {
