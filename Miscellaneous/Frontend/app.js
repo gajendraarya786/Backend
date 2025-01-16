@@ -23,3 +23,19 @@ let arr = [1,2,3];
 arr.sayHello = () => {
     console.log("Hello, I am arr");
 };
+
+// Factory functions
+// it makes the copy of the individual function and object therefore it is not efficient
+function PersonMaker (name, age) {
+    const person = {
+        name: `${name}`,
+        age: `${age}`,
+        talk() {
+            console.log(`Hello, my name is ${this.name} and I am ${this.age}`);
+        },
+    };
+    return person;
+}
+            
+let p1 = PersonMaker("Gajendra", 20);
+let p2 = PersonMaker("Krrishika", 18);
