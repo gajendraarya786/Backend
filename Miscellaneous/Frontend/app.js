@@ -39,3 +39,11 @@ function PersonMaker (name, age) {
             
 let p1 = PersonMaker("Gajendra", 20);
 let p2 = PersonMaker("Krrishika", 18);
+
+// Constructor functions
+// An alternative to factory functions 
+function Person(name, age){
+    this.name = `${name}`;
+    this.age = `${age}`;
+}
+let p3 = new Person("GAJENDRA", 21);
