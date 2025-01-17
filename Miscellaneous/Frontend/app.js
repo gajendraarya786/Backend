@@ -85,7 +85,7 @@ class Student extends PersonCommon{
 
 class Teacher extends PersonCommon{
     constructor(name, age, subject){
-        super(name, age); // parent class constructor is being called..
+        super(name, age); // parent class constructor is being called.
         this.subject = subject;
     }
 }
