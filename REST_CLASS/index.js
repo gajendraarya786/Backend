@@ -47,7 +47,7 @@ app.post("/posts", (req, res) => {
     let id = uuidv4(); 
     posts.push({id, username, content});
     res.redirect("/posts");
-});
+}); 
 
 app.get("/posts/:id", (req, res) => {
       let {id} = req.params;
@@ -72,10 +72,9 @@ app.get("/posts/:id/edit", (req, res) => {
 });
 app.delete("/posts/:id", (req,res) => {
     let {id} = req.params;
-    let post = posts.find((p) => id===p.id);
-    post.id = "";
+    posts = posts.filter((p) => id!==p.id);
     res.redirect("/posts");
-})
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
