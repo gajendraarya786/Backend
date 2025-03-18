@@ -138,7 +138,7 @@ app.patch("/user/:id", (req, res) => {
         console.log(err); 
         res.send("some error in DB");
     }
-})
+});
 
 
 app.listen("3001", () => {
